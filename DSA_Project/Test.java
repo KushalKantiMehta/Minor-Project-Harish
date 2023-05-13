@@ -38,19 +38,20 @@ public class Test extends Employee {
         System.out.println(foreignEmployeeCount(e));
     }
     public static void arrangeEmployeeBySalary(Employee e[]){
-        int n=e.length;
+        Employee tempArray[]=e;
+        int n=tempArray.length;
         for(int i=0;i<n;i++){
-            double temp=0;
+            Employee temp=0;
             for(int j=i;j<n;j++){
                 if(e[i].salary<e[j].salary){
-                    temp=e[i];
-                    e[i]=e[j];
-                    e[j]=temp;
+                    temp=tempArray[i];
+                    tempArray[i]=e[j];
+                    tempArray[j]=temp;
                 }
             }
         }
         for(int i=0;i<n;i++){
-            e[i].EmployeeDetails();
+            tempArray[i].EmployeeDetails();
         }
     
     }
