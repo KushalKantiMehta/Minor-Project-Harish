@@ -43,9 +43,9 @@ public class Test extends Employee {
             double temp=0;
             for(int j=i;j<n;j++){
                 if(e[i].salary<e[j].salary){
-                    temp=e[i].salary;
-                    e[i].salary=e[j].salary;
-                    e[j].salary=temp;
+                    temp=e[i];
+                    e[i]=e[j];
+                    e[j]=temp;
                 }
             }
         }
